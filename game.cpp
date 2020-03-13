@@ -40,7 +40,7 @@ node *construct_board()
 }
 //To add ladders, the function can generate amount of ladders user want to have on the board.
 //Ladders are added randomly by using the concept of random number generation.
-void add_ladders(int valueofladder, node *head)
+node *add_ladders(int valueofladder, node *head)
 {
 	while(valueofladder--){
 			//adding ladder
@@ -71,11 +71,12 @@ void add_ladders(int valueofladder, node *head)
 			
 			
 		}
+		return head;
 }
 
 //To add Snakes, the function can generate amount of Snakes user want to have on the board.
 //Snakes are added randomly by using the concept of random number generation.
-void add_snakes(int valueofsnakes, node *head)
+node *add_snakes(int valueofsnakes, node *head)
 {
 	while(valueofsnakes--){
 			int ran1=0;
@@ -105,14 +106,15 @@ void add_snakes(int valueofsnakes, node *head)
 			while(tempNode->random!=null)tempNode=tempNode->next;
 			itr->random=tempNode;
 }
+return head;
 }
 // Driver Program
 int main()
 {
 	cout<<"Initiating..Please Wait"<<endl;
 	node *head= construct_board();
-	add_ladders(8, head);
-	add_snakes(8, head);
+	head= add_ladders(8, head);
+	head= add_snakes(8, head);
 	cout<<endl;
 	system("cls");
 	cout<<"Welcome_To_Snake_&_Ladders_Game: Developed by Sanchit-Verma"<<endl;
