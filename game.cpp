@@ -133,12 +133,12 @@ int main()
 	cin>>p1;
 	cout<<"player2 name:"<<endl;
 	cin>>p2;
-	cout<<"Sucessfully Recorded  : "<<p1<<"  "<<p2<<endl;
+	cout<<"Sucessfully Recorded  : "<<p1<<"  vs  "<<p2<<endl;
 	bool flag=0;                                         //flag variable indicates the players turn if 0 then player1 else player2.
 	while(1)
 	{
 		if(itr1->data==100)break;
-		if(itr2->data!=100)break;
+		if(itr2->data==100)break;
 			if(!flag)
 			{
 				int mod;
@@ -201,7 +201,7 @@ int main()
 	system("cls");
 	if(itr1->data==100)cout<<p1<<" won"<<endl;
 	else cout<<p2<<" won"<<endl;
-	cout<<"Press Enter To exit"<<end;
+	cout<<"Press Enter To exit"<<endl;
 	int exit;
 	cin>>exit;
 	return 0;
